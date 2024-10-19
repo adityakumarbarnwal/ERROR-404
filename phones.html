@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Phone Number Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fake Phone Number Tracker</h1>
+
+        <!-- Navigation Link to Website Page -->
+        <nav>
+            <a href="websites.html">Go to Fake Website Tracker</a>
+        </nav>
+
+        <!-- Fake Phone Number Section -->
+        <section id="phone-section">
+            <h2>Fake Phone Number Section</h2>
+            <div class="input-section">
+                <input type="text" id="phone-input" placeholder="Enter phone number with country code">
+                <button id="add-phone" onclick="addFakePhoneNumber()">Add Phone Number</button>
+            </div>
+            <!-- Error message for phone input -->
+            <p id="phone-error" class="error-message"></p>
+        
+            <div class="output-section phones-output">
+                <!-- Phone Numbers Under Review -->
+                <div class="review-section">
+                    <h3>Phone Numbers Under Review</h3>
+                    <ul id="review-phones"></ul>
+                </div>
+                <!-- Confirmed Fake Phone Numbers -->
+                <div class="confirmed-section">
+                    <h3>Confirmed Fake Phone Numbers</h3>
+                    <ul id="confirmed-phones"></ul>
+                </div>
+                <!-- Confirmed Legitimate Phone Numbers -->
+                <div class="legitimate-section">
+                    <h3>Confirmed Legitimate Phone Numbers</h3>
+                    <ul id="legitimate-phones"></ul>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+body {
+    font-family: "Gill Sans", sans-serif;
+    background-image: url("https://th.bing.com/th/id/OIP.5XTPyE2iBxNESdy78bECBgHaEo?pid=ImgDet&w=474&h=296&rs=1");
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    opacity:100;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #01011f;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #6868cf;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #333ece;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2b10ca;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    color: #243e91;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #381cef;
+    padding-bottom: 5px;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b3b56;
+    color: #ffffff;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 20px #7a31f7;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #51cdef;
+    color: #1e1e2f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index:10;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #3383c0;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #51cdef;
+}
+
+.output-section {
+    margin-top: 20px;
+}
+
+.websites-output,
+.phones-output {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.review-section,
+.confirmed-section,
+.legitimate-section {
+    width: 30%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #3b3b56;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+ul li:hover {
+    background-color: #4b4b67;
+}
+
+ul li:before {
+    content: "•";
+    color: #00c8ff;
+    font-size: 1em;
+    padding-right: 10px;
+}
+
+#review-websites {
+    overflow: scroll;
+}
+
+#review-websites li,
+#review-phones li {
+    color: #02eeff;
+    font-weight: bolder;
+}
+
+#confirmed-websites li,
+#confirmed-phones li {
+    color: #ff4757;
+    overflow: auto;
+}
+
+#legitimate-websites li,
+#legitimate-phones li {
+    color: #2ed573;
+    overflow: auto;
+}
+
+#review-websites li:hover,
+#review-phones li:hover,
+#confirmed-websites li:hover,
+#confirmed-phones li:hover,
+#legitimate-websites li:hover,
+#legitimate-phones li:hover {
+    background-color: #41498d;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #e5dbfa;
+    padding: 10px 20px;
+    color: #1e1e2f;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border: 2px solid rgb(139, 96, 209);
+    box-shadow: 0 0 10px rgb(139, 96, 209), 0 0 20px rgb(139, 96, 209)
+}
+
+nav a:hover {
+    background-color: rgb(139, 96, 209);
+    transform: scale(1.05);
+}
+
+nav a:active {
+    background-color: rgb(139, 96, 209);
+}

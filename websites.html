@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fake Website Tracker</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Fake Website Tracker</h1>
+            
+            <nav>
+                <a href="phones.html">Go to Fake Phone Number Tracker</a>
+            </nav>
+
+            <section id="website-section">
+                <h2>Fake Website Section</h2>
+                <div class="input-section">
+                    <input
+                        type="text"
+                        id="website-input"
+                        placeholder="Enter website URL"
+                    />
+                    <button id="add-website" onclick="addFakeWebsite()">
+                        Add Website
+                    </button>
+                </div>
+
+                <div class="output-section websites-output">
+                    <div class="review-section">
+                        <h3>Websites Under Review</h3>
+                        <ul id="review-websites"></ul>
+                    </div>
+                    <div class="confirmed-section">
+                        <h3>Confirmed Fake Websites</h3>
+                        <ul id="confirmed-websites"></ul>
+                    </div>
+                    <div class="legitimate-section">
+                        <h3>Confirmed Legitimate Websites</h3>
+                        <ul id="legitimate-websites"></ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
