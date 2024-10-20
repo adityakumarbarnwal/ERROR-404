@@ -83,3 +83,40 @@ function displayFakePhoneNumbers() {
         confirmedList.innerHTML = fakePhoneNumbers.confirmed.map(phone => `<li>${phone}</li>`).join('');
     }
 }
+
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+function addEmail() {
+    const emailInput = document.getElementById('email-input')?.value.trim();
+
+    if (emailInput === "") {
+        alert("Please enter an email.");
+        return;
+    }
+
+    if (!emailRegex.test(emailInput)) {
+        alert("Please enter a valid email.");
+        return;
+    }
+
+    if (fakeEmails.review.includes(emailInput) || fakeEmails.confirmed.includes(emailInput)) {
+        alert("This email has already been entered.");
+        return;
+    }
+
+    fakeEmails.review.push(emailInput);
+    displayFakeEmails();
+    document.getElementById('email-input').value = '';
+}
+
+function displayFakeEmails(){
+    const reviewList = document.getElementById('review-emails');
+    const confirmedList = document.getElementById('confirmed-emails');
+
+    if (reviewList) {
+        reviewList.innerHTML = fakeEmails.review.map(email => `<li>${email}</li>`).join('');
+    }
+    if (confirmedList) {
+        confirmedList.innerHTML = fakeEmails.confirmed.map(email => `<li>${email}</li>`).join('');
+    }
+}
