@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Email Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spam Email Tracker</h1>
+        <nav>
+            <a href="websites.html">Go to Fake Website Tracker</a>
+        </nav>
+        <nav>
+            <a href="phones.html">Go to Fake Phone Number Tracker</a>
+        </nav>
+        <section id="output-section emails-output">
+            <h2>Spam Email Section</h2>
+            <div class="input-section">
+                <input type="email" id="email-input" placeholder="Enter Email">
+                <button id="add-email" onclick="addEmail()">Add Email</button>
+            </div>
+            <div class="output-section emails-output">
+                <div class="review-section">
+                    <h3>Emails Under Review</h3>
+                    <ul id="review-emails"></ul>
+                </div>
+                <div class="confirmed-section">
+                    <h3>Confirmed Spam Emails</h3>
+                    <ul id="confirmed-emails"></ul>
+                </div>
+                <div class="legitimate-section">
+                    <h3>Confirmed Legitimate Emails</h3>
+                    <ul id="legitimate-emails"></ul>
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Fake Tracker Tools. All Rights Reserved.</p>
+            <p>For inquiries, please contact us:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@faketracker.com">support@faketracker.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            </ul>
+            <p>Follow us on social media:</p>
+            <ul class="social-links">
+                <li><a href="https://twitter.com/faketracker" target="_blank">Twitter</a></li>
+                <li><a href="https://facebook.com/faketracker" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
