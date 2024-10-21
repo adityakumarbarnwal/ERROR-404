@@ -1,6 +1,7 @@
 // Arrays to hold the websites and phone numbers
 let fakeWebsites = {review: [], confirmed: []};
 let fakePhoneNumbers = {review: [], confirmed: []};
+let fakeEmails = {review: [], confirmed: []};
 
 // Regular expression for URL validation
 const websiteRegex = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$/;
@@ -47,15 +48,20 @@ function displayFakeWebsites() {
 }
 
 // Regular expression for phone number validation (e.g., +1234567890, 8-16 digits)
-const phoneRegex = /^\+\d{8,16}$/;
+const phoneRegex =/^\+\d{10,17}$/;
 
 // Function to validate and add a fake phone number
 function addFakePhoneNumber() {
     const phoneInput = document.getElementById('phone-input')?.value.trim();
 
+    if (phoneInput === "") {
+        alert("Please enter a phone number.");
+        return;
+    }
+
     // Validate phone number format
     if (!phoneRegex.test(phoneInput)) {
-        alert("Please enter a valid phone number!");
+        alert("Please enter in the correct format, e.g. +1234567890!");
         return;
     }
 
