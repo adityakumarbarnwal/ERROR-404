@@ -2,6 +2,7 @@
 let fakeWebsites = {review: [], confirmed: []};
 let fakePhoneNumbers = {review: [], confirmed: []};
 let fakeEmails = {review: [], confirmed: []};
+let fakeContent = {review: [], confirmed: []};
 
 // Regular expression for URL validation
 const websiteRegex = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$/;
@@ -10,31 +11,26 @@ const websiteRegex = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$/;
 function addFakeWebsite() {
     const websiteInput = document.getElementById('website-input')?.value.trim();
     
-    // Check if the input is empty
     if (websiteInput === "") {
         alert("Please enter a website URL.");
         return;
     }
 
-    // Validate the website format
     if (!websiteRegex.test(websiteInput)) {
         alert("Please enter a valid website URL.");
         return;
     }
-
-    // Check if the website has already been entered
+    
     if (fakeWebsites.review.includes(websiteInput) || fakeWebsites.confirmed.includes(websiteInput)) {
         alert("This website has already been entered.");
         return;
     }
-
-    // Add the website to the 'review' list
+    
     fakeWebsites.review.push(websiteInput);
     displayFakeWebsites();
-    document.getElementById('website-input').value = ''; // Clear input field
+    document.getElementById('website-input').value = '';
 }
 
-// Function to display fake websites
 function displayFakeWebsites() {
     const reviewList = document.getElementById('review-websites');
     const confirmedList = document.getElementById('confirmed-websites');
@@ -124,5 +120,35 @@ function displayFakeEmails(){
     }
     if (confirmedList) {
         confirmedList.innerHTML = fakeEmails.confirmed.map(email => `<li>${email}</li>`).join('');
+    }
+}
+
+function addContent() {
+    const ContentInput = document.getElementById('emails-input')?.value.trim();
+
+    if (ContentInput === "") {
+        alert("Please enter a content.");
+        return;
+    }
+
+    if (fakeContent.review.includes(ContentInput) || fakeContent.confirmed.includes(ContentInput)) {
+        alert("This email has already been entered.");
+        return;
+    }
+
+    fakeContent.review.push(ContentInput);
+    displayFakeContent();
+    document.getElementById('emails-input').value = '';
+}
+
+function displayFakeContent(){
+    const reviewList = document.getElementById('review-content');
+    const confirmedList = document.getElementById('confirmed-content');
+
+    if (reviewList) {
+        reviewList.innerHTML = fakeContent.review.map(content => `<li>${content}</li>`).join('');
+    }
+    if (confirmedList) {
+        confirmedList.innerHTML = fakeContent.confirmed.map(content => `<li>${content}</li>`).join('');
     }
 }
