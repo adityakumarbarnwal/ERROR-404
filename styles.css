@@ -137,14 +137,16 @@ ul li:before {
 
 #review-websites li,
 #review-phones li,
-#review-emails li {
+#review-emails li,
+#review-content li {
     color: #02eeff;
     font-weight: bolder;
 }
 
 #confirmed-websites li,
 #confirmed-phones li,
-#confirmed-emails li {
+#confirmed-emails li,
+#confirmed-content li {
     color: #ff4757;
     overflow: auto;
 }
@@ -159,9 +161,11 @@ ul li:before {
 #review-websites li:hover,
 #review-phones li:hover,
 #review-emails li:hover,
+#review-content li:hover,
 #confirmed-websites li:hover,
 #confirmed-phones li:hover,
 #confirmed-emails li:hover,
+#confirmed-content li:hover,
 #legitimate-websites li:hover,
 #legitimate-phones li:hover,
 #legitimate-emails li:hover {
@@ -202,6 +206,11 @@ footer {
     padding: 20px 0;
     margin-top: 20px;
     font-size: 14px;
+}
+
+a {
+    margin-right: 13px;
+    display: inline;
 }
 
 .footer-container {
