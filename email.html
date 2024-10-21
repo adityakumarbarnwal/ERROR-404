@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spam Email Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 </head>
 <body>
+    <nav>
+        <ul style="background-color: rgb(0, 34, 92); padding: 40px; margin: 0; height: 20px; text-align: end;">
+            <a href="">Services</a>
+            <a href="">Learn</a>
+            <a href="">Community</a>
+            <a href="">Sign In/Sign Up</a>
+        </ul>
+    </nav>
     <div class="container">
         <h1>Spam Email Tracker</h1>
         <nav>
@@ -21,18 +30,26 @@
                 <input type="email" id="email-input" placeholder="Enter Email">
                 <button id="add-email" onclick="addEmail()">Add Email</button>
             </div>
+            <div class="input-section">
+                <input type="text" id="emails-input" placeholder="Enter the message/content received">
+                <button id="add-emails" onclick="addContent()">Add Email Content</button>
+            </div>
             <div class="output-section emails-output">
                 <div class="review-section">
                     <h3>Emails Under Review</h3>
                     <ul id="review-emails"></ul>
                 </div>
+                <div class="review-section">
+                    <h3>Contents Under Review</h3>
+                    <ul id="review-content"></ul>
+                </div>
                 <div class="confirmed-section">
                     <h3>Confirmed Spam Emails</h3>
                     <ul id="confirmed-emails"></ul>
                 </div>
-                <div class="legitimate-section">
-                    <h3>Confirmed Legitimate Emails</h3>
-                    <ul id="legitimate-emails"></ul>
+                <div class="confirmed-section">
+                    <h3>Confirmed Spam Contents</h3>
+                    <ul id="confirmed-content"></ul>
                 </div>
             </div>
         </section>
